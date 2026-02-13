@@ -19,7 +19,7 @@ const dancingScript = Dancing_Script({
 
 export const metadata: Metadata = {
   title: "To My Valentine, Joycelyn",
-  description: "A special message for a special person.",
+  description: "A special message for a special person. I love you!",
 };
 
 export default function RootLayout({
