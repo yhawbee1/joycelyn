@@ -72,10 +72,11 @@
 .scrollText {
   font-size: 0.8rem;
   color: var(--primary-rose);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem 1rem;
   border-radius: 500px;
   border: 1px solid var(--primary-rose);
+  backdrop-filter: blur(10px);
 }
 
 .arrow {
