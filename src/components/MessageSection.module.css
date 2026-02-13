@@ -1,0 +1,133 @@
+.container {
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: #fffafa; /* Snow white background for the section */
+}
+
+.letter {
+  background: #fdfbf7; /* Paper color */
+  padding: 5rem;
+  border-radius: 2px;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.1),
+    0 10px 0 -5px #fdfbf7,
+    0 10px 1px -4px rgba(0, 0, 0, 0.1),
+    0 20px 0 -10px #fdfbf7,
+    0 20px 1px -9px rgba(0, 0, 0, 0.1),
+    0 50px 100px rgba(0, 0, 0, 0.05); /* Stacked paper effect */
+  max-width: 800px;
+  position: relative;
+  overflow: visible;
+  border: 1px solid #eee;
+  transform: rotate(-1deg); /* Slight tilt for realism */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.letter:hover {
+  transform: rotate(0deg) translateY(-10px) scale(1.02);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #5d5d5d;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  color: var(--primary-rose);
+}
+
+.text p {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-inter);
+}
+
+.signature {
+  margin-top: 4rem;
+  text-align: right;
+  font-family: var(--font-dancing);
+  font-size: 2.5rem;
+  color: var(--primary-rose);
+  animation: signatureAppear 2s ease-out forwards;
+}
+
+.waxSeal {
+  position: absolute;
+  bottom: -30px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  background: #b22222;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.5),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  transform: rotate(15deg);
+  border: 4px solid #8b0000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.waxSeal:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+.sealInner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@keyframes signatureAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .letter {
+    padding: 3rem 1.5rem;
+    transform: none;
+  }
+  .letter:hover {
+    transform: translateY(-5px);
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .waxSeal {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    bottom: -20px;
+    right: 20px;
+  }
+  .sealInner {
+    width: 35px;
+    height: 35px;
+  }
+}
