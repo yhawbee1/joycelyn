@@ -9,7 +9,7 @@ const BeautySection = () => {
 
   const photos = [
     {
-      src: "/joycelyn-5.jpg",
+      src: "/joycelyn-5.JPG",
       alt: "You are stunning",
     },
     {
@@ -81,6 +81,7 @@ const BeautySection = () => {
                     width={500}
                     height={700}
                     className={styles.image}
+                    quality={100}
                     unoptimized
                   />
                   <div className={styles.overlay}>
